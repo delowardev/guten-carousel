@@ -6,8 +6,8 @@
  */
 
 // import js
-import Edit from './Edit';
-import Save from './Save';
+import Edit from './edit';
+import Save from './save';
 
 //  Import CSS.
 import './editor.scss';
@@ -26,4 +26,10 @@ registerBlockType( 'core/guten-carousel', {
 	],
 	edit: Edit,
 	save: Save,
+	attributes: {
+		images: {
+			type: 'array',
+			default: [],
+		},
+	},
 } );
