@@ -75,7 +75,7 @@ function slider_block_cgb_block_assets() { // phpcs:ignore
 	 * @since 1.16.0
 	 */
 	register_block_type(
-		'cgb/block-slider-block', array(
+		'core/guten-carousel', array(
 			// Enqueue blocks.style.build.css on both frontend & backend.
 			'style'         => 'slider_block-cgb-style-css',
 			// Enqueue blocks.build.js in the editor only.

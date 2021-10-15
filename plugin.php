@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name: slider-block — CGB Gutenberg Block Plugin
- * Plugin URI: https://github.com/ahmadawais/create-guten-block/
- * Description: slider-block — is a Gutenberg plugin created via create-guten-block.
- * Author: mrahmadawais, maedahbatool
- * Author URI: https://AhmadAwais.com/
+ * Plugin Name: Gutenberg Carousel Block
+ * Plugin URI: https://github.com/delowardev/guten-slider-xxxx/
+ * Description: Siample Gutenberg Carousel Block
+ * Author: delowardev
+ * Author URI: https://github.com/delowardev
  * Version: 1.0.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
+ * Slug: guten-carousel
  *
- * @package CGB
  */
 
 // Exit if accessed directly.
