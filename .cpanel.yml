@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/delosxto/wp.delowar.dev/wp-content/plugins/guten-carousel
     - /bin/cp -R dist $DEPLOYPATH
+
