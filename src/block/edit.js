@@ -1,4 +1,4 @@
-import { Platform } from '../../../gutenberg/packages/element/src';
+const { Platform } = wp.element;
 
 const { __ } = wp.i18n;
 

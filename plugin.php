@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Gutenberg Carousel Block
- * Plugin URI: https://github.com/delowardev/guten-slider-xxxx/
+ * Plugin URI: https://github.com/delowardev/guten-carousel/
  * Description: Siample Gutenberg Carousel Block
  * Author: delowardev
  * Author URI: https://github.com/delowardev
