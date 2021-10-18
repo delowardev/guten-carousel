@@ -1,15 +1,56 @@
-/**
- * #.# Editor Styles
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
+.guten-carousel {
+  .guten-carousel-slide {
+	position: relative;
+	img {
+	  display: block;
+	}
+	.components-button-group {
+	  visibility: hidden;
+	  opacity: 0;
+	  position: absolute;
+	  top: -2px;
+	  margin: 8px;
+	  z-index: 20;
+	  transition: box-shadow 0.2s ease-out;
+	  border-radius: 2px;
+	  background: #fff;
+	  border: 1px solid #1e1e1e;
+	  &.is-left {
+		left: 0;
+	  }
+	  &.is-right {
+		right: 0;
+	  }
+	  .components-button {
+		color: #1e1e1e;
+		&:not(:focus) {
+		  border: none;
+		  box-shadow: none;
+		}
+		svg {
+		  fill: none;
+		}
+	  }
+	}
 
-.wp-block-cgb-block-slider-block  {
-  background: $green;
-  border: 0.2rem solid $black;
-  color: $black;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+	figure.is-selected {
+	  //&::before {
+		//pointer-events: none;
+		//box-shadow: 0 0 0 1px #fff inset, 0 0 0 3px var(--wp-admin-theme-color) inset;
+		//content: "";
+		//outline: 2px solid transparent;
+		//position: absolute;
+		//top: 0;
+		//right: 0;
+		//bottom: 0;
+		//left: 0;
+		//z-index: 1;
+	  //}
+	  .components-button-group{
+		visibility: visible;
+		opacity: 1;
+	  }
+	}
+
+  }
 }

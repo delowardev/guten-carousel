@@ -4,16 +4,37 @@
  * Can include things like variables and mixins
  * that are used across the project.
 */
-/**
- * #.# Editor Styles
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
-.wp-block-cgb-block-slider-block {
-  background: #bada55;
-  border: 0.2rem solid #292929;
-  color: #292929;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem; }
+.guten-carousel .guten-carousel-slide {
+  position: relative; }
+  .guten-carousel .guten-carousel-slide img {
+    display: block; }
+  .guten-carousel .guten-carousel-slide .components-button-group {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -2px;
+    margin: 8px;
+    z-index: 20;
+    -webkit-transition: -webkit-box-shadow 0.2s ease-out;
+    transition: -webkit-box-shadow 0.2s ease-out;
+    -o-transition: box-shadow 0.2s ease-out;
+    transition: box-shadow 0.2s ease-out;
+    transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #1e1e1e; }
+    .guten-carousel .guten-carousel-slide .components-button-group.is-left {
+      left: 0; }
+    .guten-carousel .guten-carousel-slide .components-button-group.is-right {
+      right: 0; }
+    .guten-carousel .guten-carousel-slide .components-button-group .components-button {
+      color: #1e1e1e; }
+      .guten-carousel .guten-carousel-slide .components-button-group .components-button:not(:focus) {
+        border: none;
+        -webkit-box-shadow: none;
+                box-shadow: none; }
+      .guten-carousel .guten-carousel-slide .components-button-group .components-button svg {
+        fill: none; }
+  .guten-carousel .guten-carousel-slide figure.is-selected .components-button-group {
+    visibility: visible;
+    opacity: 1; }

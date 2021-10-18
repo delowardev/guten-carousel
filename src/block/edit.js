@@ -1,20 +1,41 @@
+
+// local import
+import Slider from './slider';
+
+// wp
 const { Platform } = wp.element;
-
 const { __ } = wp.i18n;
-
 const { MediaPlaceholder } = wp.blockEditor;
 
+// const
 const ALLOWED_MEDIA_TYPES = [ 'image', 'video' ];
-
 const PLACEHOLDER_TEXT = Platform.isNative ?
 	__( 'ADD MEDIA' ) :
 	__( 'Drag images, upload new ones or select files from your library.' );
 
+// comp
 export default function Edit( props ) {
-	const { className, attributes: { images }, setAttributes } = props;
+	const {
+		className,
+		attributes: { images },
+		setAttributes,
+		isSelected,
+	} = props;
 
-	const setImages = ( _img ) => {
-		setAttributes( { images: _img } );
+	const setImages = ( _images ) => {
+		const __images = _images.map( ( {
+			id,
+			alt,
+			url,
+			sizes,
+		} ) => ( {
+			id,
+			alt,
+			url,
+			sizes,
+			href: '',
+		} ) );
+		setAttributes( { images: __images } );
 	};
 
 	const hasImages = !! images.length;
@@ -23,13 +44,11 @@ export default function Edit( props ) {
 	return (
 		<div className={ className }>
 
-			<div className="images">
-				{
-					images.map( img => (
-						<img key={ img.id } src={ img.url } alt={ img.alt } />
-					) )
-				}
-			</div>
+			<Slider
+				isSelected={ isSelected }
+				images={ images }
+				setAttributes={ setAttributes }
+			/>
 
 			<MediaPlaceholder
 				addToGallery={ hasImageIds }
