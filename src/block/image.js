@@ -8,7 +8,6 @@ const { __ } = wp.i18n;
 export default function Image( props ) {
 	const {
 		image,
-		onSelect,
 		isSelected,
 		isFirstItem,
 		isLastItem,
@@ -18,7 +17,7 @@ export default function Image( props ) {
 	} = props;
 
 	return (
-		<figure onClick={ onSelect } className={ classnames( { 'is-selected': isSelected } ) }>
+		<figure className={ classnames( { 'is-selected': isSelected } ) }>
 			<img className="guten-slide-image" src={ image.url } alt={ image.alt } />
 			<ButtonGroup className="is-left">
 				<Button

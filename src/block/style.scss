@@ -1,14 +1,20 @@
-/**
- * #.# Styles
- *
- * CSS for both Frontend+Backend.
- */
+.wp-block-guten-carousel {
 
-.wp-block-cgb-block-slider-block  {
-  background: $red;
-  border: 0.2rem solid $black;
-  color: $black;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+}
+
+.guten-carousel-wrap {
+  overflow: hidden;
+  display: block;
+  .guten-carousel {
+	display: flex;
+	width: 100%;
+	transition: 400ms;
+	transform: translateX(0);
+	.guten-carousel-slide {
+	  flex-basis: 100%;
+	  max-width: 100%;
+	  min-width: 100%;
+	  display: block;
+	}
+  }
 }
