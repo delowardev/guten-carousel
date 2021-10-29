@@ -34,23 +34,50 @@
 	}
 
 	figure.is-selected {
-	  //&::before {
-		//pointer-events: none;
-		//box-shadow: 0 0 0 1px #fff inset, 0 0 0 3px var(--wp-admin-theme-color) inset;
-		//content: "";
-		//outline: 2px solid transparent;
-		//position: absolute;
-		//top: 0;
-		//right: 0;
-		//bottom: 0;
-		//left: 0;
-		//z-index: 1;
-	  //}
 	  .components-button-group{
 		visibility: visible;
 		opacity: 1;
 	  }
 	}
 
+  }
+}
+
+// controls
+.guten-carousel-control-wrap {
+  position: relative;
+  .guten-carousel-dots {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	z-index: 2;
+	.guten-carousel-dot {
+	  height: var(--dot-height);
+	  width: var(--dot-width);
+	  margin: var(--dot-spacing);
+	  border: none;
+	  cursor: pointer;
+	  padding: 0;
+	  background: white;
+	  border-radius: 5px;
+	  &.guten-carousel-dot-active {
+		background: #ffa74a;
+	  }
+	}
+  }
+  .guten-carousel-navs {
+	z-index: 2;
+	position: absolute;
+	pointer-events: none;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+	padding: 20px;
+	.guten-carousel-nav {
+	  pointer-events: all;
+	}
   }
 }

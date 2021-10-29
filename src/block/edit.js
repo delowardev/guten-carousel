@@ -1,6 +1,7 @@
 
 // local import
 import Slider from './slider';
+import Panel from './panel';
 
 // wp
 const { Platform } = wp.element;
@@ -17,6 +18,7 @@ const PLACEHOLDER_TEXT = Platform.isNative ?
 export default function Edit( props ) {
 	const {
 		className,
+		attributes,
 		attributes: { images },
 		setAttributes,
 		isSelected,
@@ -44,25 +46,31 @@ export default function Edit( props ) {
 	return (
 		<div className={ className }>
 
+			<Panel { ...props } />
 			<Slider
 				isSelected={ isSelected }
 				images={ images }
 				setAttributes={ setAttributes }
+				attributes={ attributes }
 			/>
 
-			<MediaPlaceholder
-				addToGallery={ hasImageIds }
-				isAppender={ hasImages }
-				onSelect={ setImages }
-				multiple={ true }
-				value={ images }
-				accept="image/*,video/*"
-				allowedTypes={ ALLOWED_MEDIA_TYPES }
-				labels={ {
-					title: ! hasImages && __( 'Carousel' ),
-					instructions: ! hasImages && PLACEHOLDER_TEXT,
-				} }
-			/>
+			{
+				isSelected && (
+					<MediaPlaceholder
+						addToGallery={ hasImageIds }
+						isAppender={ hasImages }
+						onSelect={ setImages }
+						multiple={ true }
+						value={ images }
+						accept="image/*,video/*"
+						allowedTypes={ ALLOWED_MEDIA_TYPES }
+						labels={ {
+							title: ! hasImages && __( 'Carousel' ),
+							instructions: ! hasImages && PLACEHOLDER_TEXT,
+						} }
+					/>
+				)
+			}
 
 		</div>
 	);

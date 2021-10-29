@@ -31,5 +31,45 @@ registerBlockType( 'core/guten-carousel', {
 			type: 'array',
 			default: [],
 		},
+		autoplay: {
+			type: 'boolean',
+			default: true,
+		},
+		autoplayTimeout: {
+			type: 'number',
+			default: 1500,
+		},
+		autoplaySpeed: {
+			type: 'number',
+			default: 500,
+		},
+		navButtons: {
+			type: 'boolean',
+			default: true,
+		},
+		navPrevText: {
+			type: 'string',
+			default: 'Prev',
+		},
+		navNextText: {
+			type: 'string',
+			default: 'Next',
+		},
+		sliderDots: {
+			type: 'boolean',
+			default: true,
+		},
+		dotHeight: {
+			type: 'number',
+			default: 10,
+		},
+		dotWidth: {
+			type: 'number',
+			default: 20,
+		},
+		dotSpacing: {
+			type: 'number',
+			default: 5,
+		},
 	},
 } );

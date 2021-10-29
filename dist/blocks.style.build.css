@@ -1,1 +1,25 @@
-.guten-carousel-wrap{overflow:hidden;display:block}.guten-carousel-wrap .guten-carousel{display:-ms-flexbox;display:flex;width:100%;-webkit-transition:400ms;-o-transition:400ms;transition:400ms;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}.guten-carousel-wrap .guten-carousel .guten-carousel-slide{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%;min-width:100%;display:block}
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.guten-carousel-wrap {
+  overflow: hidden;
+  display: block; }
+  .guten-carousel-wrap .guten-carousel {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
+    .guten-carousel-wrap .guten-carousel .guten-carousel-slide {
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      display: block; }
